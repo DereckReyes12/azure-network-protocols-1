@@ -65,6 +65,34 @@ In this tutorial, we observe various network traffic to and from Azure Virtual M
 <p>Connect to your Windows 10 VM,install wireshark,launch the aplication,and set the filter to display only ICMP traffic.</p>
 <img src="https://i.imgur.com/PkWQw8k.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 <br />
+
+<p>Find the private IP adress of the Ubuntu VM and try pingin it from the windows 10VM.</p>
+<p>Use wire shark to monitor and observe the ping requests and replies.</p>
 <img src="https://i.imgur.com/OQc70EW.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 <img src="https://i.imgur.com/k9NazjE.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<br />
+
+<p>Try to ping a public website {such as www.google.com} and watch the traffic in wireshark:</p>
+<img src="https://i.imgur.com/Jg7G3aS.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<br />
+<p>Initiate a perpetual/nono-stop ping from your windows 10 VM to your ubuntu VM:</p>
+<img src="https://i.imgur.com/s9BcFUH.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<br />
+
+<p>Access the Network Security Group{NSG} associated with your ubuntu VM and block inbound ICMP traffic.</p>
+<p>Then,switch back to the windows 10 VM to monitor the ICMP traffic in wireshark and observe the ping</p>
+<p>command results in the terminal.</p>
+<img src="https://i.imgur.com/0EVKLeb.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="https://i.imgur.com/76tYZ52.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<br />
+
+<p>Re-anble ICMP traffic in the Network Security Group {NSG} for your ubuntu VM.</p>
+<p>Return to the Windows 10 VM to monitor the ICMP traffic in wireshark and observe</p>
+<p>the ping activity in the command line,wich should now resume fuctioning.once confirmed,stop the ping activity.</p>
+<img src="https://i.imgur.com/HsdDqA3.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<br />
+
+<h3 align="center;">
+  Time to observe SSH traffic
+</h3>
 
