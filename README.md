@@ -95,4 +95,47 @@ In this tutorial, we observe various network traffic to and from Azure Virtual M
 <h3 align="center;">
   Time to observe SSH traffic
 </h3>
+<p>In wireshark,set filter to display only SSH traffic.</p>
+<p>From your Windows 10 VM establish an SSH connection to your Ubuntu VM using its Private IP adress.</p>
+<p>Execute commands sush as 1s,pwd and others in the SSH session</p>
+<p>Observe the SSH traffic activity in wireshark as the commands are executed,generating visible traffic pattern</p>
+<br />
+<p>Exit the SSH connection by tyoing 'exit' and pressing {return}</p>
+<img src="https://i.imgur.com/e2y88Gd.png" height="80%" width="80%" alt="Disk Sanitization Steps"/> 
+<br />
+<h3 align="center;">
+  Next, we're going to observe DHCP Traffic
+</h3>
+<br />
+<p>In Wireshark,apply a filter to display only DHCP traffic.</p>
+<p>On your Windows 10 VM,use the command line to request a new IP adress by running ipconfig/renew.</p>
+<p>Observe the DHCP traffic generated in Wireshark during the process.</p>
+<img src="https://i.imgur.com/Qb6erVd.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<br />
+<br />
+<h3 align="center;">
+  Let's now observe our DNS traffic next
+</h3>
+<br />
+<p> Back in Wireshark, filter for DNS traffic only.</p>
+<p>On your Windows 10 VM,open the command line and run nslookup command</p>
+<p>to look up the ip adresses for google.com and disney.com.</p>
+<p>simultaneously,monitor Wireshark with a filter set to DNS traffic</p>
+<p>to observe the DNS queries and responses generated during the process.</p>
+<img src="https://i.imgur.com/LvHrFzx.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<br />
+<br />
+<h3 align="center;">
+  Finally, we will observe RDP traffic to finish up this tutorial
+</h3>
+<br />
+<p> Back in Wireshark, filter for RDP traffic only using "tcp.port==3389".</p>
+<p> You'll be seing a non-stop stream of traffic. Do you know why there is constant traffic in our tcp.port==3389?</p>
+<p>The explanation is that RDP protocol continuously streams a live feed from one computer to another,wich results in constant traffic being transmitted.</p>
+<img src="https://i.imgur.com/hiJGFPM.png" height="80%" width="80%" alt="Disk Sanitization Steps"/> 
+<br />
+<p>Now that we're finished observing the network, DON'T FORGET TO CLEAN UP YOUR AZURE ENVIRONMENT! This will prevent you from incurring additional charges</p>
+<p>Close your Remote Desktop connection and delete resource group created at the start of this tutorial.</p>
+<p>Confirm the deletion by checking for a notification undeer the bell icon or waiting for confirmation message</p>
+<p>to ensure the resource group have been successfully removed.</p>
 
